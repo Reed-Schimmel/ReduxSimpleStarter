@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
+import BookList from '../containers/BookList';
+import BookDetail from '../containers/BookDetail';
+
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
@@ -16,7 +19,7 @@ export default class App extends Component {
       videos: [],
       selectedVideo: null
     };
-    this.videoSearch('tensorflow');
+    this.videoSearch('');
   }
   
   videoSearch(term) {
@@ -29,12 +32,19 @@ export default class App extends Component {
     const videoSearch = _.debounce(term => this.videoSearch(term), 500)
     return (
       <div>
-        <SearchBar onSearchTermChange={videoSearch} />
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
-          videos={this.state.videos}
-        />
+        <div>
+          <BookList />
+          <BookDetail />
+        </div>
+        {/* <div className="divider" style={{ borderWidth: 5 }}> ^Redux project | No Redux v</div> */}
+        <div>
+          <SearchBar onSearchTermChange={videoSearch} />
+          <VideoDetail video={this.state.selectedVideo} />
+          <VideoList
+            onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
+            videos={this.state.videos}
+          />
+        </div>
       </div>
     );
   }
