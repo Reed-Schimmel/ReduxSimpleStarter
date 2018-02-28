@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 
-import Project1 from './Project1';
-import Project2 from './Project2';
-import SearchBar from '../containers/SearchBar';
+// import Project1 from './Project1';
+// import Project2 from './Project2';
+import Project3 from './Project3';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
-        <SearchBar />
+        <Project3 />
         {/* <Project1 /> */}
         {/* <Project2 /> */}
       </div>

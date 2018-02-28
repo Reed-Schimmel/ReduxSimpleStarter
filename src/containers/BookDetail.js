@@ -7,7 +7,7 @@ class BookDetail extends Component {
       return  <div>Select a book to get started.</div>;
     }
 
-    const { title, pages } = this.props.book
+    const { title, pages } = this.props.book;
 
     return (
       <div>

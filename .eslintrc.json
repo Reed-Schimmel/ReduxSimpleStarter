@@ -1,0 +1,39 @@
+{
+  "env": {
+      "es6": true,
+      "node": true
+  },
+  "extends": "rallycoding",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "global-require": "off",
+    "react/require-extension": "off",
+    // "react-native/no-unused-styles": 2,
+    // "react-native/split-platform-components": 2,
+    // "react-native/no-inline-styles": 2,
+    // "react-native/no-color-literals": 2,
+    "no-underscore-dangle": "off",
+    "indent": [
+        "error",
+        2
+    ],
+    "arrow-body-style": "off",
+    "linebreak-style": [
+        "error",
+        "unix"
+    ],
+    // "quotes": [
+    //     "error",
+    //     "double"
+    // ],
+    "semi": [
+        "error",
+        "always"
+    ]
+  }
+}
